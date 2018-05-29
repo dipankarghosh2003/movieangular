@@ -1,0 +1,32 @@
+<div class="main-container">
+	<div class="container flex">
+		<div class="row">
+			<div class="col-md-3">
+				<img src="https://image.tmdb.org/t/p/w500/{{personDetailsData.profile_path}}" alt="Card image" style="width:200px">
+			</div>
+			<div class="col-md-9">
+				<h4 class="text-left">{{personDetailsData.name}}</h4>
+				<b>Biography:</b>
+				<p>{{personDetailsData.biography}}</p>
+
+			</div>
+			
+		</div>
+		<div class="row">
+			<div class="col-md-3">
+				<p>Birthday:</p>
+				<p>{{personDetailsData.birthday | date:'dd-MM-yyyy'}}</p>
+				<br>
+				<p>Place Of Birth:</p>
+				<p>{{personDetailsData.place_of_birth}}</p>
+				<p>Gender</p>
+				<p *ngIf="personDetailsData.gender==2; else female">Male</p>
+				<p>
+					<ng-template #female>
+					    Female
+					</ng-template>
+				</p>
+			</div>
+		</div>
+	</div>
+</div>

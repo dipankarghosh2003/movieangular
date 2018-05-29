@@ -1,0 +1,32 @@
+<div class="main-container">
+	<div class="container flex">
+		<input type="text" name="searchbox"  style="width:100%">
+		<div class="card-columns">
+		  <div *ngFor="let m of peopleList">
+			
+				<div class="card">
+
+				
+				  <div class="card-body">
+				  	<a routerLink="../person/{{m.id}}">
+				  	<div class="leftbox">
+				  		<img class="card-img-top" src="https://image.tmdb.org/t/p/w500/{{m.profile_path}}" alt="Card image">
+				  	</div>
+				  	<div class="rightbox">
+				  		<br/>
+				  		<h4 class="card-title text-center">{{m.name}}</h4>
+				   		
+				    	<div class="card-text detailed">{{m.title}}</div>
+				    	<!-- <p class="vote_count">{{m.vote_count}}</p> -->
+
+				  	</div>
+				    </a>
+				  </div>
+				 
+			
+			</div>
+		  </div>
+			
+		</div>
+	</div>
+</div>

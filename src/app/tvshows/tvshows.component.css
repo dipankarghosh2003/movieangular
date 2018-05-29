@@ -1,0 +1,19 @@
+img.card-img-top {
+    height: 239px;
+    width: 100%;
+}
+.card .detailed{
+	text-align: justify;
+}
+.card-text.detailed {
+    height: 237px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    }
+.detailed.ellipsis:after {
+  content: '...';
+  display: inline-block;
+}
+.card-body{
+	height: 650px;
+}

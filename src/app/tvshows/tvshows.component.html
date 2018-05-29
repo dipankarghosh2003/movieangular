@@ -1,0 +1,33 @@
+<div class="main-container">
+	<div class="container flex">
+		<input type="text" name="searchbox"  style="width:100%">
+		<div class="card-columns">
+		  <div *ngFor="let m of tvShows">
+			
+				<div class="card">
+
+				
+				  <div class="card-body">
+				  	<div class="leftbox">
+				  		<img class="card-img-top" src="https://image.tmdb.org/t/p/w500/{{m.poster_path}}" alt="Card image">
+				  	</div>
+				  	<div class="rightbox">
+				  		<br/>
+				  		<h4 class="card-title">{{m.name}}</h4>
+				   		<p class="card-text">Released : {{m.first_air_date | date:'dd-MM-yyyy'}}</p>
+				    	<div class="card-text detailed">{{m.overview}}</div>
+				    	<!-- <p class="vote_count">{{m.vote_count}}</p> -->
+
+				  	</div>
+				    
+				  </div>
+				  <div class="card-footer">
+				  	 <small class="text-muted"><a href="#">More Info</a></small>
+				  </div>
+			
+			</div>
+		  </div>
+			
+		</div>
+	</div>
+</div>
